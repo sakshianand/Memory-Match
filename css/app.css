@@ -29,8 +29,8 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto';
+    
 }
 
 /*
@@ -40,10 +40,10 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+   
     padding: 32px;
     border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -84,11 +84,15 @@ h1 {
 /*
  * Styles for the Score Panel
  */
-
+.star-font{
+    color:#ef6c00;
+}
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 600px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .score-panel .stars {
@@ -104,6 +108,26 @@ h1 {
 }
 
 .score-panel .restart {
-    float: right;
+    
     cursor: pointer;
+}
+@media only screen and (max-width: 780px){
+    .deck{
+        max-width: 300px;
+        min-height: auto;
+        padding-bottom : 16px;
+    }
+    .deck .card{
+        height: 50px;
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    .score-panel{
+        display: block;
+        width:70%;
+        text-align: center;
+        padding-bottom: 0;
+        line-height: 1.7em;
+    }
+
 }
