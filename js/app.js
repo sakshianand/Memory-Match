@@ -1,6 +1,9 @@
-
 //Array to hold all Cards
-let cards = ['fa-share-alt','fa-signal','fa-github','fa-facebook','fa-diamond','fa-cube','fa-bomb','fa-whatsapp','fa-share-alt','fa-signal','fa-github','fa-facebook','fa-diamond','fa-cube','fa-bomb','fa-whatsapp']
+let cards = ['fa-share-alt','fa-signal','fa-github','fa-facebook','fa-diamond','fa-cube','fa-bomb','fa-whatsapp','fa-share-alt','fa-signal','fa-github','fa-facebook','fa-diamond','fa-cube','fa-bomb','fa-whatsapp'];
+$(document).ready(function(){
+createGrid();
+})
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -18,10 +21,14 @@ function shuffle(array) {
 }
 
  //Dynamically populating the grid after getting the cards shuffled by calling shuffle() function
- let cardArray = shuffle(cards);
- for(let i=0;i<cardArray.length;i++){
- $('.deck').append('<li class="card"><i class="fa '+cardArray[i]+'"</i></li>');
+ function createGrid(){
+	 let cardArray = shuffle(cards);
+	 for(let i=0;i<cardArray.length;i++){
+	 $('.deck').append('<li class="card"><i class="fa ${cardClass}"</i></li>');
+	 }	
  }
+
+
 
 
 
