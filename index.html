@@ -7,7 +7,6 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-</head>
     <link rel="stylesheet" href="css/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -41,7 +40,24 @@
         <ul class="deck">
         <!--Cards added dynamically through js -->
      	</ul>
+        <a href="#animatedModal" id="demo01">A</a>
+        <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <i class="fa fa-times close"></i>
+            </div>
+                
+            <div class="modal-content content">
+                <h1 class="congrats">Congratulations</h1>
+                <h5 class="time">Time taken: <span class="hours">00</span> Hours <span class="minutes"> 00 </span> Minutes <span class="sec"> 00 </span> Seconds</h5>
+                <h5 class="m">Total Moves: <span class="moves">0</span></h5>
+                <h5 class="star-rate-container"><span class="star-rate">2 </span> out of 3</h5>
+                <h5 class="high">Best Move : <span class="best"> 0 </span> Moves</h5>
+                <button type="button"  class="restart" >Restart</button>
+            </div>
+        </div>
     </div>
+    <script src="js/animatedModal.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

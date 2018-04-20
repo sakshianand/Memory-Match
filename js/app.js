@@ -94,8 +94,31 @@ function shuffle(array) {
  }
  //To Check whether user has won the game or not
 function checkWinner(){
-	if(match==8)
-		console.log('won');
+	if(match==8){
+		let best=0;
+		if(localStorage.getItem("best") == null)
+			{
+				best=moves;
+				localStorage.setItem("best", best);
+			}
+		else
+		{
+			if(moves<localStorage.getItem("best"))
+			{
+				best=moves;
+				localStorage.setItem("best", best);
+			}
+		}
+		console.log(localStorage.getItem("best"));
+	    clearInterval(interval);
+		$('.sec').text(s);
+		$('.minutes').text(m);
+		$('.hours').text(h);
+		$('.star-rate').text(stars);
+		$('.best').text(localStorage.getItem("best"));
+		$("#demo01").click();	
+	}
+
 }
 // To check whether the two flipped cards are same or not
  function checkMatch(){
@@ -127,6 +150,7 @@ function checkWinner(){
  	if(moves==10 || moves==20)
  	{
  		$('.stars').children().first().remove();
+ 		stars--;
  	}
  	
  	
@@ -157,9 +181,13 @@ function RestartGame(){
 $('.restart').on('click',RestartGame);
  //Adding Click functionality to individual cards
  $('.card').on('click',displaySymbol);
+ //Winning Modal
+ $('#demo01').animatedModal({
+ 	color:'#ffffff'
+ });
+ 
 
 })
-
 
 
 
