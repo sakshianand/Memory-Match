@@ -42,7 +42,7 @@ Each turn:
  ## External Libraries/Plugins Used
  * [Animate.css](https://daneden.github.io/animate.css/)
  * [AnimateModal.js](http://joaopereirawd.github.io/animatedModal.js/)
- * [FontAwesome.js](https://fontawesome.com/)
+ * [FontAwesome.js](https://fontawesome.com/).
 
 
 
